@@ -29,6 +29,18 @@
 				width: 100px;
 			}
 
+			.float-right {
+				float: right;
+			}
+
+			.float-left {
+				float: left;
+			}
+
+			.clear-float {
+				clear: both;
+			}
+
 			#green {
 				color: green;
 			}
@@ -94,6 +106,52 @@
 		<div id="google-blue">
 			<p>This div's background color is the same blue as in the Google logo</p>
 			<p>It was picked using the ColorZilla Chrome extension</p>
+		</div>
+
+		<hr>
+
+		<div class="pink-background">
+			<p>1: This div is of class pink-background</p>
+		</div>
+
+		<div class="pink-background float-right">
+			<p>2: This div is of class pink-background and of class float-right</p>
+		</div>
+
+		<div class="pink-background">
+			<p>3: This div is of class pink-background</p>
+		</div>
+
+		<div class="pink-background">
+			<p>4: This div is of class pink-background</p>
+		</div>
+
+		<div class="pink-background float-left">
+			<p>5: This div is of class pink-background and of class float-left</p>
+		</div>
+
+		<div class="pink-background float-left">
+			<p>6: This div is of class pink-background and of class float-left</p>
+		</div>
+
+		<div class="pink-background float-right">
+			<p>7: This div is of class pink-background and of class float-right</p>
+		</div>
+
+		<p>8: This is a paragraph with no float</p>
+
+		<p class="clear-float">9: This paragraph is of class clear-float</p>
+
+		<div class="pink-background float-right">
+			<p>10: This div is of class pink-background and of class float-right</p>
+		</div>
+
+		<div class="pink-background float-left">
+			<p>11: This div is of the class pink-background and of class float-left</p>
+		</div>
+
+		<hr>
+
 		
 	</body>
 
