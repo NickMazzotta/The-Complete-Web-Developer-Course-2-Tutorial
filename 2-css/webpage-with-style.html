@@ -6,11 +6,26 @@
 			p {
 
 				color: red;
-				font-size: 200%;
 			}
 
 			h1 {
 				color: pink;
+			}
+
+			.brown {
+				color: brown;
+			}
+
+			.large {
+				font-size: 250%;
+			}
+
+			.underlined {
+				text-decoration: underline;
+			}
+
+			#green {
+				color: green;
 			}
 
 		</style>
@@ -20,8 +35,25 @@
 		<h1 style="color:green;font-size:100%;">Font size 100% is relative to the &lt;p&gt; tag, even though this is a &lt;h1&gt; header</h1>
 		<h1>This header is using internal css</h1>
 		<p style="color:blue;font-size: 300%;">This is using inline styling</p>
-		<p>This &lt;p&gt; is using regular styling<p>
+		<p>This &lt;p&gt; is controlled by the p tag in style<p>
 		<p>So is this one</p>
+
+		<hr>
+
+		<p class="brown">This &lt;p&gt; is of class "brown" and is controlled by the 
+			.brown tag in style</p>
+		<p class="brown large">This &lt;p&gt; is of class "brown" and class "large"</p>
+		<h1 class="brown">This &lt;h1&gt; is of class "brown" as well</h1>
+		<p id="green">This &lt;p&gt; has a unique id of "green" and is controlled by the 
+			#green tag in style</p>
+		<p>This is a normal &lt;p&gt; until <span class="underlined">this span of characters within a &lt;span&gt;
+			element</span> within the &lt;p&gt; element</p>
+
+		<hr>
+
+		
+
+		
 	</body>
 
 
