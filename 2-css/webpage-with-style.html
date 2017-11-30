@@ -1,11 +1,27 @@
 <html>
 	<head>
 		<title>Webpage With Style</title>
+
+		<style type="text/css">
+			p {
+
+				color: red;
+				font-size: 200%;
+			}
+
+			h1 {
+				color: pink;
+			}
+
+		</style>
 	</head>
 
 	<body>
-		<h1 style="color:green;font-size:100%;">Font size 100% is relative to the &lt;p&gt; tag, even though this is a header</h1>
-		<p style="color:blue;font-size: 200%;">The quick brown fox jumped over the lazy dog</p>
+		<h1 style="color:green;font-size:100%;">Font size 100% is relative to the &lt;p&gt; tag, even though this is a &lt;h1&gt; header</h1>
+		<h1>This header is using internal css</h1>
+		<p style="color:blue;font-size: 300%;">This is using inline styling</p>
+		<p>This &lt;p&gt; is using regular styling<p>
+		<p>So is this one</p>
 	</body>
 
 
