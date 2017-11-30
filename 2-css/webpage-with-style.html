@@ -24,8 +24,19 @@
 				text-decoration: underline;
 			}
 
+			.pink-background {
+				background-color: pink;
+				width: 100px;
+			}
+
 			#green {
 				color: green;
+			}
+
+			#italic-div {
+				font-style: italic;
+				color: white;
+				background-color: gray;
 			}
 
 		</style>
@@ -44,14 +55,29 @@
 			.brown tag in style</p>
 		<p class="brown large">This &lt;p&gt; is of class "brown" and class "large"</p>
 		<h1 class="brown">This &lt;h1&gt; is of class "brown" as well</h1>
-		<p id="green">This &lt;p&gt; has a unique id of "green" and is controlled by the 
-			#green tag in style</p>
-		<p>This is a normal &lt;p&gt; until <span class="underlined">this span of characters within a &lt;span&gt;
-			element</span> within the &lt;p&gt; element</p>
+		<p id="green">This &lt;p&gt; has a unique id of "green" and is controlled by the #green tag in style</p>
+		<p>This is a normal &lt;p&gt; until <span class="underlined">this span of characters within a &lt;span&gt; element</span> within the &lt;p&gt; element</p>
 
 		<hr>
 
-		
+		<div>
+			<p>This &lt;p&gt; is in a separate &lt;div&gt;</p>
+			<p>Along with this one</p>
+		</div>
+
+		<div id="italic-div" class="brown">
+			<p>This &lt;div&gt; has a unique id of italic-div and is of class brown</p>
+			<p>Notice that even though the div is set to brown, the default <p> styling takes precident</p>
+			<p>If there were no &lt;p&gt; styling, the div color would affect its &lt;p&gt;s</p>
+			<p class="brown">This &lt;p&gt; is specifically of class brown</p>
+		</div>
+
+		<div class="pink-background">
+			<p>This &lt;div&gt; is of class pink-background</p>
+			<p>The div class also is of width: 100px;</p>
+		</div>
+
+		<hr>
 
 		
 	</body>
