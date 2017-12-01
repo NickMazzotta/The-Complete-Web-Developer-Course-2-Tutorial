@@ -1,17 +1,27 @@
 <html>
 
 	<head>
-		<title>Borders</title>
+		<title>Fonts</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
 
 		<style type="text/css">
 			
-			.web-safe-font {
-				font-family: Georgia Palatino Bookman;
+			.web-safe-font { font-family: Georgia Palatino Bookman; }
+			.google-font { font-family: 'Barlow Condensed', sans-serif; }
+
+			.bold { font-weight: bold; }
+			.italic { font-style: italic; }
+			.underlined { text-decoration: underline }
+
+			.bigger { font-size: 600%; }
+
+			a {
+				text-decoration: none;
 			}
-			.embeded-font {
-				font-family: 'Barlow Condensed', sans-serif;
+
+			a:hover {
+				text-decoration: underline;
 			}
 
 		</style>
@@ -19,8 +29,30 @@
 
 	<body>
 
+		<h1>Fonts</h1>
+		<br />
+
+		<hr>
+
 		<p class="web-safe-font">This is a font<p>
-		<p class="embeded-font">This is the Google Font Barlow Condensed</p>
+		<p class="google-font">This is the Google Font Barlow Condensed</p>
+
+		<hr>
+
+		<p class="bold">This is bold using a font-<span class="italic underlined">weight</span> of bold</p>
+		<p class="italic">This is italic using a font-<span class="bold underlined">style</span> of italic</p>
+		<p class="underlined">This is underlined using a <span class="bold italic">text-decoration</span> of underline</p>
+
+		<hr>
+
+		<p>The convention now is for links to not be underlined</p>
+		<p>Simple change the "a" tag in style to a text-decoration of none</p>
+		<p>Here is a link to <a href="http://www.google.com">Google</a> which is not underlined</p>
+		<p>By changing the a:hover tag, the link is underlined when hovering over it</p>
+
+		<hr>
+
+		<p class="bigger">And of course, font-size cannot be forgotten</p>
 
 	</body>
 
