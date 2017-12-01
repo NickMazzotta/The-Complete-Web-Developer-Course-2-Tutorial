@@ -1,0 +1,52 @@
+<html>
+
+	<head>
+		<title>Borders</title>
+		<style type="text/css">
+			
+			.square-100 {
+				width: 100px;
+				height: 100px;
+				margin: 40px;
+				float: left;
+			}
+			.blue { background-color: blue; }
+			.red { background-color: red; }
+			.green { background-color: green; }
+			.clear-float { clear: both; }
+			
+			#first-square { 
+				border: 10px black solid; 
+			}
+			#second-square { 
+				border-style: ridge solid dotted dashed;
+				border-color: black blue;
+				border-width: 10px;
+			}
+			#third-square { 
+				border-radius: 20px;
+			}
+			#radius-by-percent { border-radius: 50%; }
+			#radius-by-half-pixels { border-radius: 50px; }
+			
+
+		</style>
+	</head>
+
+	<body>
+		<div id="first-square" class="square-100 blue"></div>
+		<div id="second-square" class="square-100 red"></div>
+		<div id="third-square" class="square-100 green"></div>
+		<div class="clear-float"></div>
+		
+
+		<hr>
+
+		<div id="radius-by-percent" class="square-100 green"></div>
+		<div id="radius-by-half-pixels" class="square-100 green"></div>
+
+	</body>
+
+
+
+</html>	
