@@ -5,6 +5,20 @@
 
 		<style type="text/css">
 
+		body {
+
+			margin: 0;
+			padding: 0;
+			font-family: Helvetica, Arial, sans-serif;
+
+		}
+
+		.clear {
+			clear: both;
+		}
+
+		/* Primary Navigation Bar */
+
 		.top-bar-section {
 			float: left;
 			border-left: 1px #B2B2B2 solid;
@@ -20,7 +34,7 @@
 
 		#top-bar {
 			margin: 0 auto;
-			width: 1100px;
+			width: 1000px;
 			height: 40px;
 
 		}
@@ -65,7 +79,7 @@
 			border: 0;
 			margin: 8px 0 0 10px;
 			height: 24px;
-			width: 200px;
+			width: 180px;
 			font-weight: bold;
 			font-size: 14px;
 			float: left;
@@ -78,13 +92,27 @@
 			background-color: #E4E4E4;
 		}
 
-		body {
+		/* Header below Primary Nav Bar */
 
-			margin: 0;
-			padding: 0;
-			font-family: Helvetica, Arial, sans-serif;
-
+		#header-bar {
+			background-color: #BB1919;
+			height: 60px;
+			width: 100%;
+			margin: 0 auto;
 		}
+
+		#header-center-div {
+			height: 60px;
+			width: 1000px;
+			margin: 0 auto;
+			padding-top: 15px;
+		}
+
+
+		/* Secondary Navigation Bar */
+
+
+
 
 
 		</style>
@@ -115,8 +143,19 @@
 				<input type="image" id="search-button" src="img/search-icon.png">
 			</div>
 
+			<div class="clear"></div>
 
 		</div>
+
+		<!-- Header Bar -->
+
+		<div id="header-bar">
+			<div id="header-center-div">
+				<input type="image" id="header-text-button" src="img/header-text-image.png">
+			</div>
+		</div>
+
+		<!-- Secondary Navigation Bar -->
 
 	</body>
 
