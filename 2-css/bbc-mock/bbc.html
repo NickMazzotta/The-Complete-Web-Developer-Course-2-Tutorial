@@ -30,6 +30,7 @@
 			font-size: 90%;
 			padding: 12px 10px 0 10px;
 			height: 28px;
+
 		}
 
 		#top-bar {
@@ -38,6 +39,12 @@
 			height: 40px;
 
 		}
+
+		#top-bar a {
+			color: black;
+			text-decoration: none;
+		}
+
 
 		#logo {
 			margin-top: 8px;
@@ -94,23 +101,67 @@
 
 		/* Header below Primary Nav Bar */
 
-		#header-bar {
+		#header-background {
 			background-color: #BB1919;
-			height: 60px;
+			height: 56px;
 			width: 100%;
 			margin: 0 auto;
 		}
 
-		#header-center-div {
-			height: 60px;
+		#header-bar {
+			height: 56px;
 			width: 1000px;
 			margin: 0 auto;
-			padding-top: 15px;
+			padding-top: 13px;
 		}
 
 
 		/* Secondary Navigation Bar */
 
+		#secondary-nav-bar-background {
+			background-color: #A91717;
+			height: 36px;
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		#secondary-nav-bar {
+			height: 36px;
+			width: 1020px;
+			margin: 0 auto;
+		}
+
+		#secondary-nav-bar a {
+			text-decoration: none;
+			color: white;
+			font-size: 90%;
+		}
+
+		#secondary-nav-bar a:hover {
+			text-decoration: underline;
+		}
+
+		.secondary-nav-bar-section {
+			float: left;
+			height: 18;
+			margin-top: 11px;
+			border-right: 1px #BB4545 solid;
+			padding: 0 10px;
+		}
+
+		#secondary-nav-bar-more-text {
+			float: left;
+			height: 18;
+			margin-top: 11px;
+			padding-left: 10px;
+			padding-right: 6px;
+		}
+
+		#secondary-nav-bar-more-arrow {
+			float: left;
+			height: 4px;
+			padding: 18px 4px 0 4px;
+		}
 
 
 
@@ -128,16 +179,16 @@
 				<img id="signin-image" src="img/signin-image.png">
 				<span id="signin-text">Sign in</span>
 			</div>
-			<div class="top-bar-section top-bar-section-category">News</div>
-			<div class="top-bar-section top-bar-section-category">Sport</div>
-			<div class="top-bar-section top-bar-section-category">Weather</div>
-			<div class="top-bar-section top-bar-section-category">iPlayer</div>
-			<div class="top-bar-section top-bar-section-category">TV</div>
-			<div class="top-bar-section top-bar-section-category">Radio</div>
-			<div class="top-bar-section">
+			<a href="" class="top-bar-section top-bar-section-category">News</a>
+			<a href="" class="top-bar-section top-bar-section-category">Sport</a>
+			<a href="" class="top-bar-section top-bar-section-category">Weather</a>
+			<a href="" class="top-bar-section top-bar-section-category">iPlayer</a>
+			<a href="" class="top-bar-section top-bar-section-category">TV</a>
+			<a href="" class="top-bar-section top-bar-section-category">Radio</a>
+			<a href="" class="top-bar-section">
 				<span id="more-category-text">More</span>
 				<img id="more-arrow-image" src="img/more-down-arrow-image.png">
-			</div>
+			</a>
 			<div class="top-bar-section">
 				<input type="text" id="search-input" value="Search">
 				<input type="image" id="search-button" src="img/search-icon.png">
@@ -149,13 +200,34 @@
 
 		<!-- Header Bar -->
 
-		<div id="header-bar">
-			<div id="header-center-div">
+		<div id="header-background">
+			<div id="header-bar">
 				<input type="image" id="header-text-button" src="img/header-text-image.png">
 			</div>
 		</div>
 
 		<!-- Secondary Navigation Bar -->
+
+		<div id="secondary-nav-bar-background">
+			<div id="secondary-nav-bar">
+					<a href="" class="secondary-nav-bar-section">Home</a>
+					<a href="" class="secondary-nav-bar-section">Video</a>
+					<a href="" class="secondary-nav-bar-section">World</a>
+					<a href="" class="secondary-nav-bar-section">US &amp; Canada</a>
+					<a href="" class="secondary-nav-bar-section">UK</a>
+					<a href="" class="secondary-nav-bar-section">Business</a>
+					<a href="" class="secondary-nav-bar-section">Tech</a>
+					<a href="" class="secondary-nav-bar-section">Science</a>
+					<a href="" class="secondary-nav-bar-section">Stories</a>
+					<a href="" class="secondary-nav-bar-section">Entertainment &amp; Arts</a>
+					<a href="" class="secondary-nav-bar-section">Health</a>
+					<a href="">
+						<span id="secondary-nav-bar-more-text">More</span>
+						<img id="secondary-nav-bar-more-arrow" src="img/more-down-arrow-image-red-background.png">
+					</a>
+			</div>
+		</div>
+
 
 	</body>
 
