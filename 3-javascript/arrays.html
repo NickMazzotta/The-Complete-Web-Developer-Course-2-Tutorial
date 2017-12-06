@@ -1,0 +1,50 @@
+
+<html>
+
+	<head>
+		<title>Arrays</title>
+
+		<style type="text/css">
+
+		</style>
+
+	</head>
+
+
+	<body>
+
+
+
+		<script type="text/javascript">
+
+			var myArray = new Array();
+			myArray[0] = "pizza";
+			myArray[1] = "chocolate";
+			console.log(myArray);
+			console.log(myArray.length);
+
+			var myNewArray = ["hello", "world"];
+			console.log(myNewArray);
+
+			myNewArray.push("push adds an element to the end of an array");
+			console.log(myNewArray);
+
+			myNewArray.splice(0, 2);
+			
+			console.log("splice removes elements and takes two variables");
+			console.log("the first is the index and the second is the number of elements to delete");
+			console.log(myNewArray);
+
+			myNewArray.splice(0, 0, "splice is awesome!");
+			console.log("splice can also be used to add elements to an array");
+			console.log(myNewArray);
+
+			myNewArray.splice(1, 1, "yeah!");
+			console.log("splice can replace elements as well");
+			console.log(myNewArray);
+
+		</script>
+
+	</body>
+
+</html>
