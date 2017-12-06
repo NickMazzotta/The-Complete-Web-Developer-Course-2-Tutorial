@@ -1,0 +1,37 @@
+
+<html>
+
+	<head>
+		<title>Changing Styles</title>
+
+	</head>
+
+
+	<body>
+
+		<button id="styleText">Styleify!</button>
+
+		<p id="paragraph">Javascript is... </p>
+
+		<p id="secondParagraph">You can also stop displaying elements by changing the style.display</p>
+
+		<button id="deleteButton">Delete Above Text</button>
+
+
+
+		<script type="text/javascript">
+
+			document.getElementById("styleText").onclick = function() {
+				document.getElementById("paragraph").style.color = "red";
+				document.getElementById("paragraph").style.fontSize = "30px";
+			}
+
+			document.getElementById("deleteButton").onclick = function() {
+				document.getElementById("secondParagraph").style.display = "none";
+			}
+
+		</script>
+
+	</body>
+
+</html>
