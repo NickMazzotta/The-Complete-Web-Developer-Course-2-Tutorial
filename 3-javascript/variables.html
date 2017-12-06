@@ -1,0 +1,46 @@
+
+<html>
+
+	<head>
+		<title>Disappearing Circles</title>
+
+		<style type="text/css">
+
+		</style>
+
+	</head>
+
+
+	<body>
+
+		<input id="userInput" type="text">
+
+		<button id="changeTextButton">Change the text!</button>
+
+		<p id="text">This is some text</p>
+
+
+
+		<script type="text/javascript">
+
+			function changeText(element, newText) {
+				element.innerHTML = newText;
+			}
+
+			document.getElementById("changeTextButton").onclick = function() {
+				var userInput = document.getElementById("userInput").value;
+				var element = document.getElementById("text");
+
+				if (userInput == "") {
+					userInput = "No text was entered";
+				}
+
+				changeText(element, userInput);
+			}
+
+
+		</script>
+
+	</body>
+
+</html>
