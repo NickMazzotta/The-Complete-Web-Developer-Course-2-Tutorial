@@ -1,0 +1,60 @@
+
+<html>
+
+	<head>
+		<title>if statement</title>
+
+		<style type="text/css">
+			
+			#failedLogin {
+				display: none;
+				color: red;
+			}
+
+			#verifiedLogin {
+				display: none;
+				color: green;
+			}
+
+		</style>
+
+	</head>
+
+
+	<body>
+
+
+		<p>Type the magic word and then press the button</p>
+		
+		<input id="userInput" type="text">
+
+		<button id="enterButton">Verify</button>
+
+		<p id="failedLogin">Incorrect Password</p>
+
+		<p id="verifiedLogin">Verifed</p>
+
+
+
+
+		<script type="text/javascript">
+
+			document.getElementById("enterButton").onclick = function() {
+				var magicWord = "please";
+				var userInput = document.getElementById("userInput").value;
+
+				if (userInput == magicWord) {
+					document.getElementById("failedLogin").style.display = "none";
+					document.getElementById("verifiedLogin").style.display = "block";
+				} else {
+					document.getElementById("failedLogin").style.display = "block";
+					document.getElementById("verifiedLogin").style.display = "none";
+					console.log("failed login");
+				}
+			}
+
+		</script>
+
+	</body>
+
+</html>
