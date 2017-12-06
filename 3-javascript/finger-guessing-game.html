@@ -1,0 +1,50 @@
+
+<html>
+
+	<head>
+		<title>Guessing Game</title>
+
+		<style type="text/css">
+			
+			#fingersStatement {
+				display: none;
+				color: red;
+			}
+
+		</style>
+
+	</head>
+
+
+	<body>
+
+
+		<p>Guess how many fingers I am holding up</p>
+		
+		<input id="userInput" type="number" min="1" max="5">
+
+		<button id="enterButton">Check</button>
+
+		<p id="result"></p>
+
+
+
+
+		<script type="text/javascript">
+
+			document.getElementById("enterButton").onclick = function() {
+				var userInput = document.getElementById("userInput").value;
+				var randomNumber = Math.floor((Math.random()*5) + 1);
+
+				if (userInput == randomNumber) {
+					document.getElementById("result").innerHTML = "Yes! The answer was " + randomNumber;
+				} else {
+					document.getElementById("result").innerHTML = "Nope. The answer was " + randomNumber;
+				}
+			}
+
+		</script>
+
+	</body>
+
+</html>
