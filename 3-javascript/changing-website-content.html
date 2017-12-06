@@ -1,0 +1,35 @@
+
+<html>
+
+	<head>
+		<title>Changing Website Content</title>
+
+	</head>
+
+
+	<body>
+
+		<button id="addTextButton">Add text!</button>
+
+		<p id="paragraph">Javascript is... </p>
+
+		<button id="addMoreTextButton">Add more text!</button>
+
+		<p id="emptyParagraph"></p>
+
+
+		<script type="text/javascript">
+
+			document.getElementById("addTextButton").onclick = function() {
+				document.getElementById("paragraph").innerHTML = document.getElementById("paragraph").innerHTML + "able to add text to elements on the page";
+			}
+
+			document.getElementById("addMoreTextButton").onclick = function() {
+				document.getElementById("emptyParagraph").innerHTML = "<h1>It can also replace the text of empty elements as well</h1>";
+			}
+
+		</script>
+
+	</body>
+
+</html>
