@@ -1,0 +1,69 @@
+<html>
+
+	<head>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+
+		<style type="text/css">
+			
+			#greenCircle {
+				border-radius: 50%;
+				width: 100px;
+				height: 100px;
+				margin: 10px;
+			}
+
+			.blue {
+				background-color: blue;
+			}
+
+			.green {
+				background-color: green;
+			}
+
+			iframe {
+				height: 600px;
+				width: 500px;
+
+			}
+
+
+		</style>
+
+
+
+	</head>
+
+	<body>
+
+		<div id="greenCircle" class="green"></div>
+
+		<p>Click the green circle to put this in the console</p>
+
+
+
+		<script type="text/javascript">
+
+			var originalText = $("p").html();
+			
+			// equivalent to js: document.getElementById("greenCircle").onclick = function() {}
+			$("#greenCircle").click(function() {
+				
+				$("p").html("The html method can get and set the text of any $() element");
+				console.log(originalText);
+
+				$("#greenCircle").attr("class","blue");
+			});
+
+			$("#greenCircle").hover(function() {
+				
+				$("p").html("The hover function is equivalent to onmouseover");
+			});
+
+
+
+		</script>
+
+	</body>
+
+</html>
