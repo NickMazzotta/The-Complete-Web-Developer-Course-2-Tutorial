@@ -1,0 +1,109 @@
+
+<html>
+
+	<head>
+		<title>Guessing Game</title>
+
+		<style type="text/css">
+			
+			#yourTimeDisplay {
+				font-weight: bold;
+			}
+
+			#randomShape {
+				height: 100px;
+			}
+
+		</style>
+
+	</head>
+
+
+	<body>
+
+		<h1>Test Your Reactions!</h1>
+
+		<p>Click on the boxes and circles as quickly as you can!
+
+		<p id="yourTimeDisplay">Your time: You haven't clicked yet!</p>
+
+		<div id="randomShape"></div>
+
+
+
+		<script type="text/javascript">
+
+			randomize();
+
+			document.getElementById("randomShape").onclick = function() {
+				randomize();
+			}
+
+			// Time functions
+			function getCurrentTime() {
+				return new Date().getTime();
+			}
+
+
+			// Randomize functions
+
+			function randomize() {
+				var randomShape = document.getElementById("randomShape")
+				setRandomColor(randomShape);
+				setRandomSize(randomShape, setRandomShape(randomShape));
+				setRandomMargins(randomShape);
+			}
+
+			function getRandomColor() {
+				var letters = "0123456789ABCDEF";
+				var color = "#";
+				for (var i = 0; i < 6; i++) {
+					color += letters[Math.floor(Math.random() * 16)];
+				}
+				return color;
+			}
+
+			function setRandomColor(element) {
+				element.style.backgroundColor = getRandomColor();
+			}
+
+			// returns true if height and width should be same
+			function setRandomShape(element) {
+				// 1 => square
+				// 2 => rectangle
+				// 3 => circle
+				switch(Math.floor((Math.random()*3) + 1)) {
+					case 1:
+						element.style.borderRadius = 0;
+						return true;
+					case 2:
+						element.style.borderRadius = 0;
+						return false;
+					case 3:
+						element.style.borderRadius = "50%";
+						return true;
+					default:
+						console.log("Random number exceeded bounds");
+				}
+			}
+
+			function setRandomSize(element, heightAndWidthAreSame) {
+				console.log(heightAndWidthAreSame);
+				randomShape.style.width = Math.floor((Math.random()*300) + 100);;
+				if (heightAndWidthAreSame) {
+					randomShape.style.height = randomShape.style.width;
+				} else {
+					randomShape.style.height = Math.floor((Math.random()*300) + 100);;
+				}
+			}
+
+			function setRandomMargins(element) {
+				element.style.marginTop = Math.floor((Math.random()*400) + 50);
+				element.style.marginLeft = Math.floor((Math.random()*400) + 50);
+			}
+
+		</script>
+
+	</body>
+
+</html>
