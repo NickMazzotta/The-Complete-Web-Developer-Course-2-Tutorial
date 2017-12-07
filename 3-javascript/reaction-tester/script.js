@@ -1,34 +1,3 @@
-
-<html>
-
-	<head>
-		<title>Guessing Game</title>
-
-		<style type="text/css">
-			
-			#yourTimeDisplay {
-				font-weight: bold;
-			}
-
-		</style>
-
-	</head>
-
-
-	<body>
-
-		<h1>Test Your Reactions!</h1>
-
-		<p>Click on the boxes and circles as quickly as you can!
-
-		<p>Your time: <span id="yourTimeDisplay">You haven't clicked yet!</span></p>
-
-		<div id="randomShape"></div>
-
-
-
-		<script type="text/javascript">
-
 			var start;
 
 			randomizeAndReappear();
@@ -109,9 +78,3 @@
 				element.style.marginTop = Math.floor((Math.random()*200) + 50);
 				element.style.marginLeft = Math.floor((Math.random()*200) + 50);
 			}
-
-		</script>
-
-	</body>
-
-</html>
