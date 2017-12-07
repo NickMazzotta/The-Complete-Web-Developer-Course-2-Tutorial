@@ -10,10 +10,6 @@
 				font-weight: bold;
 			}
 
-			#randomShape {
-				height: 100px;
-			}
-
 		</style>
 
 	</head>
@@ -25,7 +21,7 @@
 
 		<p>Click on the boxes and circles as quickly as you can!
 
-		<p id="yourTimeDisplay">Your time: You haven't clicked yet!</p>
+		<p>Your time: <span id="yourTimeDisplay">You haven't clicked yet!</span></p>
 
 		<div id="randomShape"></div>
 
@@ -33,10 +29,16 @@
 
 		<script type="text/javascript">
 
-			randomize();
+			var start;
+
+			randomizeAndReappear();
 
 			document.getElementById("randomShape").onclick = function() {
-				randomize();
+				document.getElementById("randomShape").style.display = "none";
+				var end = getCurrentTime();
+				document.getElementById("yourTimeDisplay").innerHTML = (end - start) / 1000 + "s";
+				appearAfterDelay();
+
 			}
 
 			// Time functions
@@ -44,14 +46,20 @@
 				return new Date().getTime();
 			}
 
+			function appearAfterDelay() {
+				setTimeout(randomizeAndReappear(), Math.random() * 2000);
+			}
 
-			// Randomize functions
 
-			function randomize() {
+			// Shape style functions
+
+			function randomizeAndReappear() {
 				var randomShape = document.getElementById("randomShape")
 				setRandomColor(randomShape);
 				setRandomSize(randomShape, setRandomShape(randomShape));
 				setRandomMargins(randomShape);
+				randomShape.style.display = "block";
+				start = getCurrentTime();
 			}
 
 			function getRandomColor() {
@@ -89,17 +97,17 @@
 
 			function setRandomSize(element, heightAndWidthAreSame) {
 				console.log(heightAndWidthAreSame);
-				randomShape.style.width = Math.floor((Math.random()*300) + 100);;
+				randomShape.style.width = Math.floor((Math.random()*150) + 20);;
 				if (heightAndWidthAreSame) {
 					randomShape.style.height = randomShape.style.width;
 				} else {
-					randomShape.style.height = Math.floor((Math.random()*300) + 100);;
+					randomShape.style.height = Math.floor((Math.random()*150) + 20);;
 				}
 			}
 
 			function setRandomMargins(element) {
-				element.style.marginTop = Math.floor((Math.random()*400) + 50);
-				element.style.marginLeft = Math.floor((Math.random()*400) + 50);
+				element.style.marginTop = Math.floor((Math.random()*200) + 50);
+				element.style.marginLeft = Math.floor((Math.random()*200) + 50);
 			}
 
 		</script>
