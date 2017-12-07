@@ -1,0 +1,68 @@
+<html>
+
+	<head>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+
+		<style type="text/css">
+			
+			#greenCircle {
+				border-radius: 50%;
+				width: 100px;
+				height: 100px;
+				background-color: green;
+				margin: 10px;
+			}
+
+			.redSquare {
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				margin: 10px;
+			}
+
+
+		</style>
+
+
+
+	</head>
+
+	<body>
+
+		<div id="greenCircle"></div>
+
+		<div id="firstRedSquare" class="redSquare"></div>
+
+		<div id="secondRedSquare" class="redSquare"></div>
+
+		<p>jQuery can also select elements by element!</p>
+
+
+
+		<script type="text/javascript">
+			
+			// equivalent to js: document.getElementById("greenCircle").onclick = function() {}
+			$("#greenCircle").click(function() {
+				console.log("green circle recognized by id");
+			});
+
+			$(".redSquare").click(function() {
+				console.log("red square click recognized by class");
+			});
+
+			$("p").click(function() {
+				console.log("paragraph clicked");
+			})
+
+
+
+		
+
+
+
+		</script>
+
+	</body>
+
+</html>
