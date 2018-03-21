@@ -1,0 +1,51 @@
+<html>
+
+	<head>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+
+		<style type="text/css">
+			
+			#circle {
+				border-radius: 50%;
+				width: 100px;
+				height: 100px;
+				margin: 10px;
+			}
+
+			.blue {
+				background-color: blue;
+			}
+
+			.green {
+				background-color: green;
+			}
+
+
+		</style>
+
+
+
+	</head>
+
+	<body>
+
+		<div id="circle" class="green"></div>
+
+
+		<script type="text/javascript">
+
+			$("#circle").click(function() {
+				console.log("The color of the circle you clicked was" + $("#circle").css("background-color"));
+				$("#circle").css("width", "400px");
+				$("#circle").css("height", "400px");
+				$("#circle").css("background-color", "red");
+			});
+
+
+
+		</script>
+
+	</body>
+
+</html>
