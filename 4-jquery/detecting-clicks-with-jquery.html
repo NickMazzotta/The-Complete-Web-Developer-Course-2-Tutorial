@@ -2,6 +2,8 @@
 
 	<head>
 
+		<title>Detecting Clicks</title>
+
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 
 		<style type="text/css">
@@ -36,7 +38,9 @@
 
 		<div id="secondRedSquare" class="redSquare"></div>
 
-		<p>jQuery can also select elements by element!</p>
+		<p>jQuery can recognize any HTML element being clicked, including paragraphs!</p>
+
+		<p>Clicks are being registered in the console; please check there to see when a click has been detected</p>
 
 
 
@@ -54,12 +58,6 @@
 			$("p").click(function() {
 				console.log("paragraph clicked");
 			})
-
-
-
-		
-
-
 
 		</script>
 
