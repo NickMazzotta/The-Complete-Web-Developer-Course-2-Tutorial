@@ -26,11 +26,7 @@
 				width: 500px;
 
 			}
-
-
 		</style>
-
-
 
 	</head>
 
@@ -38,7 +34,14 @@
 
 		<div id="greenCircle" class="green"></div>
 
-		<p>Click the green circle to put this in the console</p>
+		<p>Click the green circle to place this text into the console</p>
+
+		<p id="circleHoveredParagraph">The circle has not been hovered over</p>
+
+		<p id="circleClickedParagraph">The circle has not been clicked</p>
+
+		<iframe src="http://www.codestars.com"></iframe>
+		
 
 
 
@@ -49,20 +52,23 @@
 			// equivalent to js: document.getElementById("greenCircle").onclick = function() {}
 			$("#greenCircle").click(function() {
 				
-				$("p").html("The html method can get and set the text of any $() element");
+				$("#circleClickedParagraph").html("The circle has been clicked");
+				
 				console.log(originalText);
 
 				$("#greenCircle").attr("class","blue");
+
+				$("iframe").attr("src", "http://www.bbc.com/");
 			});
 
+			// equivalent to js: document.getElementById("greenCircle").onmouseover = function() {}
 			$("#greenCircle").hover(function() {
 				
-				$("p").html("The hover function is equivalent to onmouseover");
+				$("#circleHoveredParagraph").html("The circle has been hovered over");
 			});
 
-
-
 		</script>
+
 
 	</body>
 
