@@ -13,12 +13,22 @@
 				margin: 10px;
 			}
 
+			.square {
+				width: 100px;
+				height: 100px;
+				margin: 10px;
+			}
+
 			.blue {
 				background-color: blue;
 			}
 
 			.green {
 				background-color: green;
+			}
+
+			.red {
+				background-color: red;
 			}
 
 
@@ -30,17 +40,63 @@
 
 	<body>
 
+		<p id="circleClickedParagraph">The circle has not been clicked</p>
+
+		<p id="bodyWidthParagraph"></p>
+
 		<div id="circle" class="green"></div>
+
+		<p>Click the circle to change its size and color</p>
+
+		<div class="square red"></div>
+
+		<div class="square red"></div>
+
+		<p>Click either square to make it disappear using the "this" tag</p>
+
+		<p id="clickCheckParagraph">You have not clicked yet</p>
+
 
 
 		<script type="text/javascript">
 
+			function updateWidthParagraph() {
+				$("#bodyWidthParagraph").html("The current width of the page is " + $("body").css("width"));
+			}
+
+			this.updateWidthParagraph();
+
+			
+
 			$("#circle").click(function() {
-				console.log("The color of the circle you clicked was" + $("#circle").css("background-color"));
-				$("#circle").css("width", "400px");
-				$("#circle").css("height", "400px");
+
+				$("#circleClickedParagraph").html("The color of the circle you clicked was " + $("#circle").css("background-color"));
+
+				$("#circle").css("width", "150px");
+				$("#circle").css("height", "150px");
 				$("#circle").css("background-color", "red");
+
 			});
+
+			$(".square").click(function() {
+
+				$(this).css("display", "none");
+
+			});
+
+			$("div").click(function() {
+				updateWidthParagraph()
+
+				if ($(this).attr("id") == "circle") {
+					$("#clickCheckParagraph").html("You have clicked on a circle");
+				} else {
+					$("#clickCheckParagraph").html("You have clicked on a square");
+				}
+
+				
+			});
+
+			
 
 
 
