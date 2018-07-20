@@ -1,0 +1,101 @@
+<html>
+
+	<head>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+
+		<style type="text/css">
+			
+			#circle {
+				border-radius: 50%;
+				width: 100px;
+				height: 100px;
+				margin: 10px;
+			}
+
+			.square {
+				width: 100px;
+				height: 100px;
+				margin: 10px;
+			}
+
+			.green {
+				background-color: green;
+			}
+
+			.red {
+				background-color: red;
+			}
+
+			#hiddenText {
+				display: none;
+			}
+
+		</style>
+
+
+
+	</head>
+
+	<body>
+
+		<div id="circle" class="green"></div>
+
+		<p>Click on the circle to make it hide</p>
+
+		<div class="square red"></div>
+
+		<div class="square red"></div>
+
+		<p>Click a square to make it fade away" tag</p>
+
+
+		<button id="fadeTextButton">Fade Out Text</button>
+
+		<p id="fadeText">Click the button to make this text fade away and make new text appear</p>
+
+		<p id="hiddenText" >This text is now shown because of the button click</p>
+
+
+
+		<button id="toggleButton">Toggle</button>
+
+		<p id="toggleText">Button will toggle this text as hidden</p>
+
+
+
+		<script type="text/javascript">
+
+			$("div").click(function() {
+				if ($(this).attr("id") == "circle") {
+					$(this).hide();
+				} else if ($(this).hasClass("square")) {
+					$(this).fadeOut("slow", function() {
+
+						alert("fadeOut slow has completed");
+					});
+				}
+			});
+
+			$("#fadeTextButton").click(function() {
+
+				$("#fadeText").fadeOut("fast", function() {
+
+					$("#hiddenText").fadeIn();
+				});
+			});
+
+			$("#toggleButton").click(function() {
+
+				if ($("#toggleText").css("display") == "none") {
+					$("#toggleText").fadeIn();
+				} else {
+					$("#toggleText").fadeOut();
+				}
+			});
+
+		</script>
+
+	</body>
+
+</html>
