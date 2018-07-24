@@ -1,1 +1,53 @@
 <!doctype html>
+<html>
+
+	<head>
+	
+		<title>AJAX</title>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+
+
+	</head>
+
+	<body>
+
+		<p>The paragraph below will be fetched automatically from another file using the jQuery get method</p>
+		<p id="getParagraph"></p>
+
+		<br>
+
+		<p>The following paragraph grabs the information using AJAX and will throw an error if content is not fetched</p>
+		<p id="AJAXParagraph"></p>
+
+		<br>
+
+		<p>This following paragraph is also using AJAX but is attempting to get from a file that is not present, so it fails</p>
+		<p id="failAJAXParagraph"></p>
+
+		<script type="text/javascript">
+
+			$.get("info.txt", function(data) {
+				$("#getParagraph").html(data);
+			});
+
+			$.ajax("info.txt").done(function(data) {
+					$("#AJAXParagraph").html(data);
+				})
+				.fail(function() {
+					$("#AJAXParagraph").html("Could not get data");
+			});
+
+			$.ajax("second_info.txt").done(function(data) {
+					$("#failAJAXParagraph").html(data);
+				})
+				.fail(function() {
+					$("#failAJAXParagraph").html("Could not get data from second_info.txt");
+			});
+
+
+		</script>
+
+	</body>
+
+</html>
