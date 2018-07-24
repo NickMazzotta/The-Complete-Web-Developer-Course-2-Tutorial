@@ -11,8 +11,27 @@
 
 	<body>
 
+		<p>The string method "match(regexString)" checks if the regexString parameter is present in the string. If it is, it returns the elements that are present. If the string does NOT contain any of the parameter, it returns null.</p>
+
+
 
 		<script type="text/javascript">
+
+			// JS regex to check against string
+			var regex = /is/;
+
+			// Using the i keyword will do a case insensitive search
+			var regexCaseInsensitive = /is/i;
+
+			// Using the g keyword will do a global search and return every instance of the variable in the search
+			var regexGlobal = /is/g;
+
+			var string = "Regex is great";
+
+			// Returns the regex string if it is present in string or NULL otherwise
+			var result = string.match(regex);
+
+
 		
 
 		</script>
